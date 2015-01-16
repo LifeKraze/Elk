@@ -33,6 +33,13 @@ module Elk
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    # Enable syslogd support. Rails logs will be sent to syslog instead of to
+    # log/*log. Anything other than 'syslog' defaults to file logs.
+
+    if AppConfig.log_method.present? && AppConfig.log_method == 'syslog'
+      config.logger = Syslogger.new "elk_rails"
+    end
+
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 

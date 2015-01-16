@@ -1,5 +1,6 @@
 defaults: &defaults
   storage: 'file'
+  log_method: 'default'
   sendgrid_username: ''
   sendgrid_password: ''
   sendgrid_domain: ''

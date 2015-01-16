@@ -29,6 +29,7 @@ gem 'devise', '2.2.3'
 gem 'sendgrid', '1.0.1'
 gem 'thin', '1.5.1'
 gem 'seed_migration', '1.0.3'
+gem 'syslogger'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
